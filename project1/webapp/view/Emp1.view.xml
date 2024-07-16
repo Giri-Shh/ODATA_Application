@@ -1,0 +1,80 @@
+<mvc:View xmlns:vk="sap.ui.vk" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" controllerName="uiapp.project1.controller.Emp1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 	xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+    	<App >
+            <pages>
+                <Page >
+                    <Toolbar >
+                       <Image src="https://www.signiwis.com/images/logo.jpg" width="100px" id="empPageImage"></Image>
+                        <ToolbarSpacer ></ToolbarSpacer>
+                        <!-- <Button icon="sap-icon://bell"> <customData>
+						<BadgeCustomData id="notify"
+							key="badge"
+							value=""/>
+					</customData></Button> -->
+                        <Button  icon="sap-icon://customer" press="userProfile"></Button>
+                        <Button icon="sap-icon://log" press="onEmpLogout"></Button>
+                        
+                    </Toolbar>
+                    
+                    <l:Splitter
+		id="mainSplitter"
+		height="500px"
+		width="100%">
+		<List id="requestList" headerText="Employees for Review" selectionChange="onPress222" mode="SingleSelectMaster" items="{empModel>}">
+            <items>
+                <ObjectListItem title="{empModel>Name}"></ObjectListItem>
+            </items>
+            <layoutData>
+				    <l:SplitterLayoutData size="100%" id="hhh" />
+			</layoutData>
+        </List>
+        <form:SimpleForm editable="true" id="empForm">
+            <Label text="Name"></Label>
+            <Input value="{empModel>Name}" enabled="false" id="rEmp"></Input>
+            <Label text="Designation"></Label >
+            <Input value="{empModel>Designation}" enabled="false"></Input>
+            <Label text="ContactNo"></Label>
+            <Input value="{empModel>Contactnumber}" enabled="false"></Input>
+            <Label text="Mail Id"></Label>
+            <Input value="{empModel>Mailid}" enabled="false"></Input>
+            <Label text="Emp ID"></Label>
+            <Input value="{empModel>Id}" enabled="false" id="rEmpId"></Input>
+            <Label ></Label>
+            <Button text="Review" press="onPressReview">
+            <layoutData>
+				    <l:SplitterLayoutData size="100%" />
+			</layoutData>
+            </Button>
+        </form:SimpleForm>
+            
+        
+
+        <!-- <form:SimpleForm >
+        <Label text="1qqqqqqqqq"></Label>
+            <Input placeholder="qqqqq"></Input>
+            <Button text="uuuu">
+             <layoutData>
+				    <l:SplitterLayoutData size="100%" />
+			</layoutData>
+            </Button>
+
+        </form:SimpleForm> -->
+
+        
+		
+	</l:Splitter>
+    <footer>
+        <Toolbar >
+            <Text text="Signiwis Technoloies Pvt Ltd"></Text>
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Label text="CONTACT: "></Label>
+            <Text text="080-6789965"></Text>
+        </Toolbar>
+    </footer>
+	
+                </Page>
+            </pages>
+        </App>
+    
+</mvc:View>

@@ -1,0 +1,255 @@
+{
+    "_version": "1.59.0",
+    "sap.app": {
+        "id": "uiapp.project1",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.12.2",
+            "toolsId": "63d92392-5fb8-4183-8cda-b85fb14fc609"
+        },
+        "dataSources": {
+            "ZGUI5APP1_SRV": {
+                "uri": "/sap/opu/odata/sap/ZGUI5APP1_SRV",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "ZGUI5APP2_SRV_01": {
+                "uri": "/sap/opu/odata/sap/ZGUI5APP2_SRV_01",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/ZGUI5APP2_SRV_01/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.120.4",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "uiapp.project1.i18n.i18n"
+                }
+            },
+            "empData": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/empData.json"
+            },
+            "requestData": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/requestData.json"
+            },
+            "loginData": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/loginData.json"
+            },
+            "overView": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/overView.json"
+            },
+            "overView2": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/overView2.json"
+            },
+            "dropDown": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/dropDown.json"
+            },
+            "newModel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/newModel.json"
+            },
+            "reviewModel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/reviewModel.json"
+            },
+            "empModel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "/model/empModel.json"
+            },
+            "abc": {
+                "preload": true,
+                "dataSource": "ZGUI5APP1_SRV",
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "xyz": {
+                "dataSource": "ZGUI5APP2_SRV_01",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "uiapp.project1.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteLogin",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetLogin"
+                    ]
+                },
+                {
+                    "name": "AdminPage1",
+                    "pattern": "AdminPage1",
+                    "target": [
+                        "TargetAdminPage1"
+                    ]
+                },
+                {
+                    "name": "AdminPage2",
+                    "pattern": "AdminPage2/{y}",
+                    "target": [
+                        "TargetAdminPage2"
+                    ]
+                },
+                {
+                    "name": "Emp1",
+                    "pattern": "Emp1/{y}/{z}",
+                    "target": [
+                        "TargetEmp1"
+                    ]
+                },
+                {
+                    "name": "overView",
+                    "pattern": "overView/{h}",
+                    "target": [
+                        "TargetoverView"
+                    ]
+                },
+                {
+                    "name": "overView2",
+                    "pattern": "overView2",
+                    "target": [
+                        "TargetoverView2"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetLogin": {
+                    "viewType": "XML",
+                    "transition": "flip",
+                    "clearControlAggregation": false,
+                    "viewId": "Login",
+                    "viewName": "Login"
+                },
+                "TargetAdminPage1": {
+                    "viewType": "XML",
+                    "transition": "flip",
+                    "clearControlAggregation": false,
+                    "viewId": "AdminPage1",
+                    "viewName": "AdminPage1"
+                },
+                "TargetAdminPage2": {
+                    "viewType": "XML",
+                    "transition": "flip",
+                    "clearControlAggregation": false,
+                    "viewId": "AdminPage2",
+                    "viewName": "AdminPage2"
+                },
+                "TargetEmp1": {
+                    "viewType": "XML",
+                    "transition": "flip",
+                    "clearControlAggregation": false,
+                    "viewId": "Emp1",
+                    "viewName": "Emp1"
+                },
+                "TargetoverView": {
+                    "viewType": "XML",
+                    "transition": "flip",
+                    "clearControlAggregation": false,
+                    "viewId": "overView",
+                    "viewName": "overView"
+                },
+                "TargetoverView2": {
+                    "viewType": "XML",
+                    "transition": "flip",
+                    "clearControlAggregation": false,
+                    "viewId": "overView2",
+                    "viewName": "overView2"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "uiapp.project1.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    }
+}

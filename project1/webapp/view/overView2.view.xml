@@ -1,0 +1,81 @@
+<mvc:View controllerName="uiapp.project1.controller.overView2" xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data">
+    
+   <App >
+        <pages>
+            <Page >
+                <content>
+                <Toolbar >
+                    <Button  icon="sap-icon://nav-back" press="onPressOverView2Back"></Button>
+                    <ToolbarSpacer ></ToolbarSpacer>
+                    <Button  icon="sap-icon://paper-plane" press="onPressAllOverView"></Button>
+                </Toolbar>
+                
+  <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='80%' width="100%" vizType='bar'>
+                
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{reviewModel>/all/}" id="idChart2">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="NAME"
+                                value="{reviewModel>Reviewedforname}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="PERFORMANCE"
+                                value="{reviewModel>Mockrating}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                        values="PERFORMANCE" />
+                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                        values="NAME" />
+                </viz:feeds>
+               
+            </viz:VizFrame>
+            <Table id="overTab2" items="{reviewModel>/all/}">
+                <columns>
+                    <Column >
+                        <Text text="MOCK TYPE"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="EMPNAME"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="RATING"></Text> 
+                    </Column>
+                    <Column >
+                        <Text text="REVIWED DATE"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="REVIEWR ID"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="REVIEWR NAME"></Text> 
+                    </Column>
+                    <Column >
+                        <Text text="FEEDBACK"></Text> 
+                    </Column>
+                </columns>
+                <ColumnListItem >
+                        <cells>
+                            <Text text="{reviewModel>Mocktype}"></Text>
+                            <Text text="{reviewModel>Reviewedforname}"></Text>
+                            <Text text="{reviewModel>Mockrating}"></Text>
+                            <Text text="{reviewModel>Reviewdate}"></Text>
+                            <Text text="{reviewModel>Reviewerid}"></Text>
+                            <Text text="{reviewModel>Reviewrname}"></Text>
+                            <Text text="{reviewModel>Feedback}"></Text>
+                        </cells>
+                </ColumnListItem>
+            </Table>
+                
+                </content>
+            </Page>
+        </pages>
+   </App>
+</mvc:View>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGUI5APP2_SRV_01" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZGUI5APPRVWTAB2" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Reviewerid"/>
+                    <PropertyRef Name="Reviedforid"/>
+                </Key>
+                <Property Name="Reviewerid" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="DATA ELEMENT FOR RVEERid" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reviedforid" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="DATA ELEMENT FOR RVRFID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reviewrname" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="DATA ELEMENT FOR RVRNAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reviewedforname" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="DATA ELEMENT FOR RVRFNAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reviewdate" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="DATA ELEMENT FOR RVDATE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mockrating" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="DATA ELEMENT FOR RVRATING" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mocktype" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="DATA ELEMENT FOR RVMTYPE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Feedback" Type="Edm.String" Nullable="false" MaxLength="70" sap:unicode="false" sap:label="DE FOR RVFB" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rvdept" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="DE FOR RVDEPT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZGUI5APP2_SRV_01_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZGUI5APPRVWTAB2Set" EntityType="ZGUI5APP2_SRV_01.ZGUI5APPRVWTAB2" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://183.82.99.164:9222/sap/opu/odata/sap/ZGUI5APP2_SRV_01/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://183.82.99.164:9222/sap/opu/odata/sap/ZGUI5APP2_SRV_01/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

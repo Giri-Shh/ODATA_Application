@@ -1,0 +1,76 @@
+{
+    "UI5":[
+        {
+            "key":"Select Designation",
+            "value":""
+        },
+        {
+            "key":"UI5 Developer",
+            "value":"UI5 Developer"
+        },
+        {
+            "key":"UI5 Consultant",
+            "value":" UI5 Consultant"
+        },
+        {
+            "key":"Fiori Consultant",
+            "value":" Fiori Consultant"
+        },
+        {
+            "key":"BTP Consultant",
+            "value":" BTP Consultant"
+        }
+
+    ],
+    "ABAP":[
+        {
+            "key":"Select Designation",
+            "value":""
+        },
+        {
+            "key":"ABAP Developer",
+            "value":"ABAP Developer"
+        },
+        {
+            "key":"Odata Consultant",
+            "value":" Odata Consultant"
+        },
+        {
+            "key":"ABAP Consultant",
+            "value":"ABAP Consultant"
+        },
+        {
+            "key":"IDOC Consultant",
+            "value":" IDOC Consultant"
+        }
+
+    ],
+    "SLF":[
+        {
+            "key":"Select Designation",
+            "value":""
+        },
+        {
+            "key":"SLF Developer",
+            "value":"SLF Developer"
+        },
+        {
+            "key":"SLF Consultant",
+            "value":" SLF Consultant"
+        }
+    ],
+    "HYB":[
+        {
+            "key":"Select Designation",
+            "value":""
+        },
+        {
+            "key":"HYB Developer",
+            "value":"HYB Developer"
+        },
+        {
+            "key":"HYB Consultant",
+            "value":" HYB Consultant"
+        }
+    ]
+}

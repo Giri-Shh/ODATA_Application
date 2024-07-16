@@ -1,0 +1,77 @@
+#application-uiappproject1-display-component---AdminPage2--adminPage2Logo{
+    margin-left: 300px;
+}
+#application-uiappproject1-display-component---Login--loginPanel-content{
+    /* margin-left: 200px; */
+    background-image: url("https://www.signiwis.com/images/main-slider/image-2.jpg");
+}
+#application-uiappproject1-display-component---Login--simpleForm--FC-NoHead--Grid{
+        position: absolute;
+        right: 0%;
+}
+#application-uiappproject1-display-component---overView--idVizFrame{
+    margin-left: 10%;
+}   
+#application-uiappproject1-display-component---Login--resetButton{
+    margin-left: 50px;
+}
+#application-uiappproject1-display-component---Login--loginButton{
+    margin-left: 30px;
+}
+#application-uiappproject1-display-component---Login--loginLabe1{
+    color: black;
+}
+#application-uiappproject1-display-component---Login--loginLabe2{
+    color: black;
+}
+#application-uiappproject1-display-component---AdminPage2--idNumber{
+    margin-left: 30px;
+}
+
+
+#reViewDialog-icon{
+    width: 100px;
+}
+#reViewDialog-title{
+    margin-left: 300px;
+}
+#addEmpDailog-icon{
+    width: 100px;
+    height: 50px;
+}
+#addEmpDailog-title{
+    margin-left: 100px;
+}
+#deleteDialog-icon{
+    width: 100px;
+}
+#deleteDialog-title{
+    margin-left: 100px;
+}
+#application-uiappproject1-display-component---AdminPage1--Hbox1{
+    margin-left: 150px;
+}
+#application-uiappproject1-display-component---AdminPage1--Hbox2{
+    margin-left: 150px;
+}
+#application-uiappproject1-display-component---AdminPage1--Panel2-content{
+    margin-left: 100px;
+}
+#application-uiappproject1-display-component---AdminPage1--Panel4-content{
+    margin-left: 100px;
+}
+#pwdChangeDialog-icon{
+    width: 100px;
+}
+#application-uiappproject1-display-component---AdminPage1--page-title{
+    margin-left: 540px;
+}
+#application-uiappproject1-display-component---Login--forgotPassword-BDI-content{
+    color: red;
+    letter-spacing: 5px;
+    margin-top: -50px;
+}
+#forgotDialog-icon{
+    width: 60px;
+    height: 30px;
+}

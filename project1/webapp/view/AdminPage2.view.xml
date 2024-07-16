@@ -1,0 +1,152 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:cards="sap.f.cards" xmlns:tnt="sap.tnt" xmlns:simple="sap.gantt.simple" xmlns:uxap="sap.uxap" xmlns:semantic="sap.m.semantic" xmlns:form="sap.ui.layout.form" controllerName="uiapp.project1.controller.AdminPage2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"   xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <SplitApp >
+        <masterPages>
+            <App >
+                <pages>
+                    <Page >
+                        <content>
+                            <SearchField search="onSearch"></SearchField>
+                            <List  id="idList" items="{newModel>}" selectionChange="onItemPress" mode="SingleSelectMaster"> 
+                                <items>
+                                    <ObjectListItem title="{newModel>Name}"></ObjectListItem>
+                                </items>
+                            </List>
+                           
+                        </content>
+                        <footer>
+                         <Toolbar  >
+                         <ToolbarSpacer ></ToolbarSpacer>
+                                <Button icon="sap-icon://add" type="Success"  press="addEmp"></Button>
+                                    <ToolbarSeparator ></ToolbarSeparator>
+
+                                <Button icon="sap-icon://delete" type="Reject" press="deleteEmp"></Button>
+                            </Toolbar></footer>
+                    </Page>
+                </pages>
+            </App>
+        </masterPages>
+        <detailPages>
+                  <App >
+                    <pages>
+                        <Page  >
+                            <content>
+                            <Toolbar >
+                                <Button  icon="sap-icon://nav-back" press="goBack"></Button>
+                                <Image src="https://www.signiwis.com/images/logo.jpg" width="100px" id="adminPage2Logo"></Image>
+                                <ToolbarSpacer ></ToolbarSpacer>
+                                 <!-- <Button icon="sap-icon://bell"> <customData>
+						            <BadgeCustomData id="adminNotify"
+							            key="badge"
+							            value=""/>
+					                </customData></Button> -->
+                                   <Button text="{i18n>over}"  press="onOverView" />
+                                 <Button  icon="sap-icon://log" press="adminLogout2"></Button>
+                            </Toolbar>
+                                 <Panel >
+                         <uxap:ObjectPageLayout id="ObjectPageLayout" > 
+                                <uxap:headerTitle>
+                                    <uxap:ObjectPageDynamicHeaderTitle >
+                                        <uxap:expandedHeading>
+                                           <Title text="{newModel>Name}" />
+                                        </uxap:expandedHeading>
+                                        <uxap:snappedHeading>
+                                            <FlexBox fitContainer="true" alignItems="Center">
+                                                    <Avatar src="sap-icon://employee" />
+						                            <Title text="{newModel>Name}" id="objectName" wrapping="true" />
+                                            </FlexBox>
+                                        </uxap:snappedHeading>
+                                        <uxap:expandedContent>
+					                        <Text text="{newModel>Designation}"/>
+				                        </uxap:expandedContent>
+                                        <uxap:snappedContent>
+                                            <Text text="{newModel>Designation}"></Text>
+                                        </uxap:snappedContent>
+                                        <uxap:navigationActions>
+                                            
+                                             <Button  icon="sap-icon://edit" type="Attention" press="editEmpDetails"/>
+                                            <Button text="{i18n>request}"  type="Emphasized" press="onRequest" />
+                                        </uxap:navigationActions>
+                                        
+                                    </uxap:ObjectPageDynamicHeaderTitle>
+                                </uxap:headerTitle>
+                                <uxap:headerContent>
+                                    <FlexBox >
+                                        <Avatar src="sap-icon://employee"></Avatar>
+                                        <layout:VerticalLayout id="idNumber" >
+                                            <Link text="{newModel>Contactnumber}"></Link>
+                                             <Link text="{newModel>Mailid}"></Link>
+                                        </layout:VerticalLayout>
+                                        <layout:HorizontalLayout >
+                                           <VBox >
+                                                <Label text="JOINED DATE: {newModel>Joindate}"></Label>
+                                                <Label id="sumneKottiddu" text="EMP ID: {newModel>Id}"></Label> 
+                                           </VBox>  
+                                        </layout:HorizontalLayout>
+                                        <!-- <layout:VerticalLayout id="idMock">
+                                            <VBox >
+                                                <Label text="Mock Rating"></Label>
+                                                <ProgressIndicator percentValue="{empData>mockrating}" displayValue="{empData>mockrating}" id="indicator" width="200px"></ProgressIndicator>
+                                            </VBox>
+                                        </layout:VerticalLayout> -->
+
+                                    </FlexBox>
+                                </uxap:headerContent>         
+                    </uxap:ObjectPageLayout>
+                   </Panel>
+
+                   <Panel headerText="All Ratings" >
+                       <Table id="myTable" items="{reviewModel>}">
+                       
+                            <columns>
+                                <Column>
+                                    <Text text="MOCK TYPE"></Text>
+                                </Column>
+                                <Column>
+                                    <Text text="REVIEWD DATE"></Text>
+                                </Column>
+                                <Column>
+                                    <Text text="REVIEWER NAME"></Text>
+                                </Column>
+                                <Column>
+                                    <Text text="REVIEWR ID"></Text> 
+                                </Column>
+                                 <Column>
+                                    <Text text="MOCK RATING"></Text>
+                                </Column>
+                                 <Column>
+                                    <Text text="FEEDBACk"></Text>
+                                </Column>
+                            </columns>
+
+                            <items>
+                                <ColumnListItem >
+                                    <cells>
+                                        <Text text="{reviewModel>Mocktype}"></Text>
+                                        <Text text="{reviewModel>Reviewdate}"></Text>
+                                        <Text text="{reviewModel>Reviewedforname}"></Text>
+                                        <Text text="{reviewModel>Reviedforid}"></Text>
+                                        <Text text="{reviewModel>Mockrating}"></Text>
+                                        <Text text="{reviewModel>Feedback}"></Text>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                       </Table>
+                   </Panel>
+                            </content>
+                            <footer>
+                                <Toolbar >
+                                    <Text text="Signiwis Technologies Pvt Ltd"></Text>
+                                    <ToolbarSpacer ></ToolbarSpacer>
+                                    <Label text="CONTACT: "></Label>
+                                    <Text text="080-567432"></Text>
+                                </Toolbar>
+                            </footer>
+                        </Page>
+                    </pages>
+                  </App>
+           
+        </detailPages>
+    </SplitApp>
+</mvc:View>

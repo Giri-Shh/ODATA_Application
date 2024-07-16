@@ -1,0 +1,87 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="uiapp.project1.controller.AdminPage1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+		<Toolbar >
+		<Image src="https://www.signiwis.com/images/logo.jpg" width="100px"></Image>
+		<ToolbarSpacer ></ToolbarSpacer>
+			<Button  icon="sap-icon://log" press="adminLogout1"></Button>
+		</Toolbar>
+       <HBox id="Hbox1">
+	   	 <Panel  id="Panel1" backgroundDesign="Transparent">
+		 	<SlideTile  class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">
+		    <GenericTile id="tile1"
+				backgroundImage="data:image/png;base64,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"
+				frameType="TwoByOne" press="onPress1" header="UI5">
+		    </GenericTile>
+            <GenericTile id="tile12"  backgroundImage="data:image/jpeg;base64,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"
+                    frameType="TwoByOne" press="onPress1" header="UI5">
+            </GenericTile>
+	    </SlideTile>
+		 </Panel>
+        <Panel id="Panel2" backgroundDesign="Transparent">
+			<SlideTile id="tile234" class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">
+		    <GenericTile id="tile2"
+				backgroundImage="https://knowasap.com/wp-content/uploads/2018/06/SAP-ABAP.jpg"
+				frameType="TwoByOne" press="onPress2" header="ABAP">
+		    </GenericTile>
+            <GenericTile backgroundImage="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/325375526/original/7fe5edb9b77b70b26a8034447d45c8afe66f1f1c/do-sap-technical-support-and-debugging.png"
+                    frameType="TwoByOne" press="onPress2" header="ABAP">
+            </GenericTile>
+	    </SlideTile>
+		</Panel>
+	   </HBox>
+
+       <HBox id="Hbox2">
+	   	  <Panel id="Panel3" backgroundDesign="Transparent">
+		  	<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">
+		    <GenericTile id="tile3"
+				backgroundImage="https://www.pngall.com/wp-content/uploads/13/Salesforce-Logo-PNG-File.png"
+				frameType="TwoByOne" press="onPress3" header="SALESFORCE">
+		    </GenericTile>
+            <GenericTile backgroundImage="https://www.salesforce.com/news/wp-content/uploads/sites/3/2021/05/Salesforce-logo.jpg"
+                    frameType="TwoByOne" press="onPress3" header="SALESFORCE">
+            </GenericTile>
+	    </SlideTile>
+		  </Panel>
+         <Panel id="Panel4" backgroundDesign="Transparent">
+		 	 <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">
+		    <GenericTile id="tile4"
+				backgroundImage="https://assets-global.website-files.com/616ef101d9f2a359845dab27/6436ee77669e1e211608c975_Sap-Hybris-logo.webp"
+				frameType="TwoByOne" press="onPress4" header="HYBRIS">
+		    </GenericTile>
+            <GenericTile backgroundImage="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/210466686/original/2a67581b6d72a0086084790fe59edd8ae7df83d1/sap-hybris-ccv2-ecommerce-development-and-enhancements.jpg"
+                    frameType="TwoByOne" press="onPress4" header="HYBRIS">
+            </GenericTile>
+	    </SlideTile>
+		 </Panel>
+	   </HBox>
+        <!-- <SlideTile id="tile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">
+		    <GenericTile
+				backgroundImage="https://www.pngall.com/wp-content/uploads/13/Salesforce-Logo-PNG-File.png"
+				frameType="TwoByOne" press="onPress3" header="SALES FORCE">
+		    </GenericTile>
+            <GenericTile backgroundImage="https://www.salesforce.com/news/wp-content/uploads/sites/3/2021/05/Salesforce-logo.jpg"
+                    frameType="TwoByOne" press="onPress3" header="SALES FORCE">
+            </GenericTile>
+	    </SlideTile>
+        <SlideTile id="tile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">
+		    <GenericTile
+				backgroundImage="https://assets-global.website-files.com/616ef101d9f2a359845dab27/6436ee77669e1e211608c975_Sap-Hybris-logo.webp"
+				frameType="TwoByOne" press="onPress4" header="HYBRIS">
+		    </GenericTile>
+            <GenericTile backgroundImage="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/210466686/original/2a67581b6d72a0086084790fe59edd8ae7df83d1/sap-hybris-ccv2-ecommerce-development-and-enhancements.jpg"
+                    frameType="TwoByOne" press="onPress4" header="HYBRIS">
+            </GenericTile>
+	    </SlideTile> -->
+		<footer>
+			<Toolbar >
+				<Text text="Signiwis Technologies Pvt Ltd"></Text>	
+				<ToolbarSpacer ></ToolbarSpacer>
+				<Button text="{i18n>over}"  type="Attention" press="onPressAP1Over"></Button>
+			</Toolbar>
+		</footer>
+    </Page>
+    
+</mvc:View>

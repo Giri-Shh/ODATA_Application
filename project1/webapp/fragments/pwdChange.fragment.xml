@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+    <Dialog id="pwdChangeDialog" contentWidth="" icon="https://www.signiwis.com/images/logo.jpg">
+    <form:SimpleForm editable="true">
+        <Label text="OLD PASSWORD"></Label>
+        <Input placeholder="Enter Your Old Password"  width="300px" id="changePwdOld" type="Password" required="true"></Input>
+        <CheckBox text="Show Password"  id="showPwd1" select="selectshowPwd1"></CheckBox>
+        <Label ></Label>
+       
+        <Label text="NEW PASSWORD"></Label>
+         <Input placeholder="Enter Your New Password" width="300px" id="changePwdNew1" type="Password" required="true"></Input>
+        <CheckBox text="Show Password"  id="showPwd2" select="selectshowPwd2"></CheckBox>
+      
+        <Label text="CONFIRM PASSWORD" ></Label>
+        <Input placeholder="Confirm Your New Password"  width="300px" id="changePwdNew2" type="Password" required="true"></Input>
+        <CheckBox text="Show Password" id="showPwd3" select="selectshowPwd3"></CheckBox>
+    </form:SimpleForm>
+    <footer>
+        <Toolbar>
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button text="Save Password"  press="onPressSavePassword"></Button>
+            <Button text="Cancel"  press="onPressPwdChangeCancel"></Button>
+        </Toolbar>
+    </footer>
+    </Dialog>
+</core:FragmentDefinition>

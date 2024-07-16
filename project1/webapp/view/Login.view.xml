@@ -1,0 +1,32 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="uiapp.project1.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
+    xmlns="sap.m" class="myClass">
+    <Page id="page44" title="{i18n>title}" >
+        <content />
+        <Panel width="100%" id="loginPanel" height="100%" >
+                <App >
+                    <pages>
+                        <Page backgroundDesign="Transparent" showHeader="false">
+                               <Image src="https://www.signiwis.com/images/logo.jpg" ></Image>
+                               <form:SimpleForm   editable="true" width="600px" id="simpleForm">
+                                    <Label text="USER ID" id="loginLabe1"></Label>
+                                    <Input required="true" placeholder="ENTER YOUR ID" width="300px" id="userId" type="Text"  liveChange="onChange1"></Input>
+                                    <Label text="PASSWORD" id="loginLabe2"></Label>
+                                    <Input required="true" placeholder="ENTER YOUR PASSWORD" width="300px" id="userPwd" type="Password" liveChange="onChange2"></Input>
+                                    <Label></Label>
+                    
+                                    <HBox >
+                                        <Button icon="sap-icon://visits" id="loginButton" type="Emphasized" text="{i18n>logi}" press="onPress"></Button>
+                                        <Button icon="sap-icon://reset" id="resetButton" type="Emphasized" text="{i18n>reset}" press="onPressReset"></Button>
+                                    </HBox>
+                                    <Label ></Label>
+                                    <Button text="*Forgot Password" width="300px" type="Ghost" id="forgotPassword" press="forgotPassword"></Button>
+                                </form:SimpleForm>
+                        
+                        </Page>
+                    </pages>
+                </App>
+        </Panel>
+    </Page>
+    
+</mvc:View>

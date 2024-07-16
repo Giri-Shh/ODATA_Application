@@ -1,0 +1,18 @@
+{
+    "EMPDETAIL":[
+        {
+            "name": "Deepa",
+            "designation":"UI5 Developer",
+            "joiningDate":"24/10/2023",
+            "clientCompany":"SAP",
+            "experienceInYear":"1.5",
+            "contactNo":"9964918764",
+            "mailId":"deepa.ne@signiwis.com",
+            "image":"sap-icon://employee",
+            "mockRating":"80",
+            "review":"Good Employee",
+            "empId":"354",
+            "pwd":"506070"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+    <Dialog id="reViewDialog" contentWidth="" icon="https://www.signiwis.com/images/logo.jpg" title="REVIEW HERE" contentHeight="1000px">
+    <form:SimpleForm editable="true" width="900px">
+        <Label text="Mock Type"></Label>
+        <Select required="true" id="rMock" change="onSelectChange">
+            <items>
+                <core:ListItem text="Select Mock Type"></core:ListItem>
+                <core:ListItem text="Monthly Mock" key="Monthly Mock"></core:ListItem>
+                <core:ListItem text="Proceeding Mock" key="Proceeding Mock"></core:ListItem>
+                <core:ListItem text="Hierarchy Mock" key="Hierarchy Mock"></core:ListItem>
+                <core:ListItem text="Proceeding Mock" key="Proceeding Mock"></core:ListItem>
+            </items>
+        </Select>
+        <Label text="RATING"></Label>
+        <Slider min="0" max="100" enableTickmarks="true"  width="100%" id="rRatingId" change="liveUpdate">
+			<ResponsiveScale tickmarksBetweenLabels="10"/>
+		</Slider>
+        <Label text="Answring Skill"></Label>
+         <Slider min="0" max="100" enableTickmarks="true"  width="100%" id="rSkillId" change="liveUpdate">
+			<ResponsiveScale tickmarksBetweenLabels="10"/>
+		</Slider>
+        <Label text="Behaviour with Senior"></Label>
+         <Slider min="0" max="100" enableTickmarks="true"  width="100%" id="rSeniorId" change="liveUpdate">
+			<ResponsiveScale tickmarksBetweenLabels="10"/>
+		</Slider>
+        <Label text="Helping Junior"></Label>
+         <Slider min="0" max="100" enableTickmarks="true"  width="100%" id="rJuniorId" change="liveUpdate">
+			<ResponsiveScale tickmarksBetweenLabels="10"/>
+		</Slider>
+        <Label text="Technical Knowledge"></Label>
+         <Slider min="0" max="100" enableTickmarks="true"  width="100%" id="rTechId" change="liveUpdate">
+			<ResponsiveScale tickmarksBetweenLabels="10"/>
+		</Slider>
+        <Label text="coding Skill"></Label>
+         <Slider min="0" max="100" enableTickmarks="true"  width="100%" id="rCodeId" change="liveUpdate">
+			<ResponsiveScale tickmarksBetweenLabels="10"/>
+		</Slider>
+        <Label text="FeedBack"></Label>
+        <TextArea placeholder="Enter Feedback About Employee" id="rFeedBack" required="true"></TextArea>
+        <Label text="Overall Review"></Label>
+        <Text text="" id="overView"></Text>
+    </form:SimpleForm>
+        
+    
+    <footer>
+        <Toolbar>
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button text="SUBMIT"  press="onReviewSave2"></Button>
+            <Button text="Close"  press="reViewCancel"></Button>
+        </Toolbar>
+    </footer>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGUI5APP1_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZGUI5APP1" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP ID IN IN EMP TABLE OF UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="DATE ELEMENT FOR EMP NAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Department" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP DEPT IN EMP TABLE FOR UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Designation" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="DATA ELEMENT FOREMP DESIGNATION IN IN EMP TABLE OF UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Joindate" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP JOIN DATA IN EMP TABLE OF UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Contactnumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP CONTACT NUMBER IN EMP TABLE OF UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mailid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP MAIL ID IN EMP TABLE OF UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mockrating" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP MOCK RATING IN EMP TABLE OF UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Password" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP PWD IN EMP TABLE OF UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Request" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP REQUEST IN EMP TABLE FOR UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Review" Type="Edm.String" Nullable="false" MaxLength="70" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP REVIEW IN EMP TABLE FOR UI5 APP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pwdchange" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="DATA ELEMENT FOR EMP PASSA=WORD CHANGE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sample1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="SAMPLE DATA ELEMENT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sample2" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="SAMPLE DATA ELEMENT 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sample3" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="SAMPLE DATA ELEMENT 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sample4" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DATA ELEEMENT SAMPLE 4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sample5" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="SAMPLE DATA ELEMENT 5" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sample6" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="SAMPLE DATA ELEMENT 6" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZGUI5APP1_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZGUI5APP1Set" EntityType="ZGUI5APP1_SRV.ZGUI5APP1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <FunctionImport Name="searchName" ReturnType="Collection(ZGUI5APP1_SRV.ZGUI5APP1)" EntitySet="ZGUI5APP1Set" m:HttpMethod="GET" sap:action-for="ZGUI5APP1_SRV.ZGUI5APP1">
+                    <Parameter Name="Name" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link rel="self" href="http://183.82.99.164:9222/sap/opu/odata/sap/ZGUI5APP1_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://183.82.99.164:9222/sap/opu/odata/sap/ZGUI5APP1_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

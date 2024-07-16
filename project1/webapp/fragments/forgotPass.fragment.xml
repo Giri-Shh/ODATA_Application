@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+    <Dialog id="forgotDialog" contentWidth="" icon="https://www.signiwis.com/images/logo.jpg">
+    <form:SimpleForm editable="true">
+        <Label text="EMP ID"></Label>
+        <Input placeholder="ENTER YOUR EMP ID" id="forgotEmpId" liveChange="forEmpId" required="true"></Input>
+        <Label text="CONTACT NO"></Label>
+        <Input placeholder="ENTER YOUR CONTACT NUMBER" id="forgotEmpNo" liveChange="forEmpNo" required="true"></Input>
+        <Toolbar >
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button text="Check" press="Validate"></Button>
+        </Toolbar>
+        <Label text="NEW PASSWORD"></Label>
+        <Input placeholder="ENTER YOUR PASSWORD" enabled="false" required="true" id="forgotPwd" type="Password"  liveChange="forpwd"></Input>
+        <CheckBox text="Show password" enabled="false" id="forCheck1" select="forCheck1"></CheckBox>
+        <Label text="CONFIRM PASSWORD"></Label>
+        <Input placeholder="CONFIRM YOUR PASSWORD" enabled="false" required="true" id="forgotCnfpwd" type="Password"  liveChange="fornfpwd"></Input>
+        <CheckBox text="Show Password" enabled="false" id="forCheck2" select="forCheck2"></CheckBox>
+        
+    </form:SimpleForm>
+
+    <footer>
+        <Toolbar>
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button text="CHANGE PASWORD" press="saveChangePassword" type="Success"></Button>
+            <Button text="Close"  press="cancelForgot" type="Reject"></Button>
+        </Toolbar>
+    </footer>
+    </Dialog>
+</core:FragmentDefinition>

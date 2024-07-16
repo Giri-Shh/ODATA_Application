@@ -1,0 +1,84 @@
+{
+    "UI5":[       
+         {
+            "name":"Sachin",
+            "designation":"UI5 Consultant",
+            "contactNo":"7259327324",
+            "mailId":"sachin.ne@signiwis.com",
+            "empId":"331"
+        },
+        {
+            "name": "Ganesh",
+            "designation":"Fiori Consultant",
+            "contactNo":"9008370062",
+            "mailId":"ganesh.ne@signiwis.com",
+            "empId":"332"
+        }
+    ],
+    "ABAP":[
+        {
+            "name": "Clinton",
+            "designation":"ABAP Consultant",
+            "contactNo":"1122334455",
+            "mailId":"Clinton.ne@signiwis.com",
+            "empId":"339"
+        },
+        {
+            "name": "Brunda",
+            "designation":"Fiori Consultant",
+            "contactNo":"9008370062",
+            "mailId":"ganesh.ne@signiwis.com",
+            "empId":"340"
+        },
+        {
+            "name": "Smrithi",
+            "designation":"Odata Consultant",
+            "contactNo":"8899667744",
+            "mailId":"brunda.ne@signiwis.com",
+            "empId":"332"
+        }
+    ],
+    "SALESFORCE":[
+        {
+            "name": "Pranay",
+            "designation":"SalesForce Consultant",
+            "contactNo":"98765434567",
+            "mailId":"pranay.ne@signiwis.com",
+            "empId":"347"
+        }
+    ],
+    "HYBRIS":[
+        {
+            "name": "Ganesh",
+            "designation":"Fiori Consultant",
+            "contactNo":"9008370062",
+            "mailId":"ganesh.ne@signiwis.com",
+            "empId":"350"
+        },
+        {
+            "name": "Madhu",
+            "designation":"BTP Consultant",
+            "contactNo":"9901443936",
+            "mailId":"madhu.ne@signiwis.com",
+            "empId":"352"
+        },
+        {
+            "name": "Deepa",
+            "designation":"UI5 Developer",
+            "contactNo":"9964918764",
+            "mailId":"deepa.ne@signiwis.com",
+            "empId":"354"
+        },
+        {
+            "name": "Gowtham",
+            "designation":"Fiori Consultant",
+            "contactNo":"1234567890",
+            "mailId":"gowtham.ne@signiwis.com",
+            "empId":"356"
+        }
+    ],
+    "UI52":[],
+    "ABAP2":[],
+    "SALESFORCE2":[],
+    "HYBRIS2":[]
+}

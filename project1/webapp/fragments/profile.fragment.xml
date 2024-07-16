@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+    <Dialog id="profileDialog" contentWidth="" icon="">
+        
+    <form:SimpleForm id="userForm">
+        <form:content >
+            <Label text="Name"/>
+            <Text text="{empModel>/profile/0/Name}" id="logName"/>
+            <Label text="Designation"/>
+            <Text text="{empModel>/profile/0/Designation}"/>
+            <Label text="Mail ID"/>
+            <Text text="{empModel>/profile/0/Mailid}"/>
+            <Label text="Employee ID"/>
+            <Text text="{empModel>/profile/0/Id}"/>
+        </form:content>
+    </form:SimpleForm>
+    <footer>
+        <Toolbar>
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button text="Close"  press="profileCancel"></Button>
+        </Toolbar>
+    </footer>
+    </Dialog>
+</core:FragmentDefinition>

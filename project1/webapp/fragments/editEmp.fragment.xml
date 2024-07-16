@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+    <Dialog id="editEmpDialog" contentWidth="50%" icon="https://www.signiwis.com/images/logo.jpg" >
+    <form:SimpleForm editable="true" id="editEmpForm">
+        <Label text="Name"></Label>
+        <Input value="{newModel>Name}" id="editedName" liveChange="abcd1" required="true"></Input>
+        <Label text="Contact Number"></Label>
+        <Input value="{newModel>Contactnumber}" id="editedContactNo" liveChange="abcd2" required="true"></Input>
+        <Label text="Mail Id"></Label>
+         <Input value="{newModel>Mailid}" id="editedMail" liveChange="abcd3" required="true"></Input>
+        <Label text="Joining Date"></Label>
+        <DatePicker value="{newModel>Joindate}" id="editedJoinDate" change="abcd4" required="true"></DatePicker>
+        <Label text="Experience"></Label>
+        <Input value="{newModel>Sample1}" type="Number" maxLength="0" id="editedExperience" liveChange="abcd5" required="true"></Input>
+
+    </form:SimpleForm>
+ 
+    <footer>
+        <Toolbar >
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button text="SAVE" type="Success" press="onPresEditSave"></Button>
+            <Button text="Close"  press="cancelEdit"></Button>
+        </Toolbar>
+    </footer>
+    </Dialog>
+</core:FragmentDefinition>

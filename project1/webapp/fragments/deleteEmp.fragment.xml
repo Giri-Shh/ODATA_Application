@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+    <Dialog id="deleteDialog" contentWidth="650px" icon="https://www.signiwis.com/images/logo.jpg">
+        <List items="{newModel>}"  mode="MultiSelect" id="idDeleteList">
+            <items>
+                <ObjectListItem title="{newModel>Name}" ></ObjectListItem>
+            </items>
+        </List>
+        <footer>
+            <Toolbar id="_IDGenToolbar1" >
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" ></ToolbarSpacer>
+                <Button id="_IDGenButton1" text="DELETE" type="Reject"  press="onItemPressDelete" ></Button>
+                <Button id="_IDGenButton2" text="Close"   press="deleteCancel"></Button>
+            </Toolbar>
+        </footer>
+
+    </Dialog>
+</core:FragmentDefinition>
